@@ -8,7 +8,8 @@ import axios from 'axios';
 
 axios.get('https://api.github.com/users/canasmh')
   .then(response => {
-    console.log(response.data);
+    const card = document.querySelector('.cards');
+    card.appendChild(githubCard(response.data));
   })
   .catch(err => {
     console.log(`There was an err: ${err}`);
