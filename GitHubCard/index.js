@@ -79,7 +79,20 @@ function githubCard(obj) {
   cardInfo.classList.add('card-info');
   name.classList.add('name');
   username.classList.add('username');
+  img.src = obj.avatar_url;
+  img.alt = "Github user profile"
   profileLink.href = obj.html_url;
+
+  // Fill in text content
+  name.textContent = obj.name;
+  username.textContent = obj.login;
+  location.textContent = `Location: ${obj.location}`;
+  profile.textContent = "Profile: ";
+  profileLink.textContent = obj.html_url;
+  followers.textContent = `Followers: ${obj.follwers}`;
+  following.textContent = `Following: ${obj.following}`;
+  bio.textContent = `Bio: ${obj.bio}`;
+
 
 
 }
