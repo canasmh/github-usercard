@@ -93,8 +93,18 @@ function githubCard(obj) {
   following.textContent = `Following: ${obj.following}`;
   bio.textContent = `Bio: ${obj.bio}`;
 
+  // Append Children
+  cardInfo.appendChild(name);
+  cardInfo.appendChild(username);
+  cardInfo.appendChild(location);
+  cardInfo.appendChild(profile.appendChild(profileLink));
+  cardInfo.appendChild(followers);
+  cardInfo.appendChild(following);
+  cardInfo.appendChild(bio);
 
+  card.appendChild(cardInfo);
 
+  return card;
 }
 
 /*
