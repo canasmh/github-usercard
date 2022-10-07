@@ -61,6 +61,7 @@ const followersArray = [];
 */
 
 function githubCard(obj) {
+  // Create Elements
   const card = document.createElement('div');
   const cardInfo = document.createElement('div')
   const img = document.createElement('img');
@@ -72,6 +73,15 @@ function githubCard(obj) {
   const followers = document.createElement('p');
   const following = document.createElement('p');
   const bio = document.createElement('p');
+
+  // Add classes and attributes
+  card.classList.add('card');
+  cardInfo.classList.add('card-info');
+  name.classList.add('name');
+  username.classList.add('username');
+  profileLink.href = obj.html_url;
+
+
 }
 
 /*
